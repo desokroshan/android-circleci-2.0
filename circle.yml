@@ -18,16 +18,11 @@ jobs:
             TERM: dumb
 
       - run:
-          name: List available targets and other sdk modules
-          command: sdkmanager --list --include_obsolete --verbose
+          name: install avd
+          command: sdkmanager "system-images;android-24;default;armeabi-v7a"
           environment:
             TERM: dumb
 
-      #- run:
-      #    name: Install custom system image
-      #    command: sdkmanager "system-images;android-23;google_apis;armeabi-v7a"
-      #    environment:
-      #      TERM: dumb
 
       - run:
           name: Create avd
